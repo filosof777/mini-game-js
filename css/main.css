@@ -441,12 +441,13 @@ img {
 
 .game__score-text {
   color: #131537;
+  margin-bottom: 0;
 }
 
 .game__score-title {
   margin-bottom: 0;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .content {
@@ -563,6 +564,162 @@ img {
   color: #fff;
   border: none;
   background-color: royalblue;
+}
+
+@media only screen and (max-width: 576px) {
+  .game {
+    padding: 40px 0;
+  }
+  .game__score {
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.289199);
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .game__title {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0;
+  }
+  .game__score-content {
+    background-color: #fff;
+    padding: 8px 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .game__score-text {
+    color: #131537;
+    margin-bottom: 0;
+  }
+  .game__score-title {
+    margin-bottom: 0;
+    font-weight: 900;
+    font-size: 16px;
+  }
+  .content {
+    width: 250px;
+    height: 220px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .content__btn {
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+  }
+  .content__img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
+  .content__img:hover {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  .content .content__triple {
+    width: 100px;
+  }
+  .content__btn:nth-child(1) .content__img {
+    top: 0;
+    left: 0;
+  }
+  .content__btn:nth-child(2) .content__img {
+    top: 0;
+    right: 0;
+  }
+  .content__btn:nth-child(3) .content__img {
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .content__btn:nth-child(3) .content__img:hover {
+    -webkit-transform: translate(-50%, -10px);
+            transform: translate(-50%, -10px);
+  }
+  .content__triple {
+    width: 254px;
+    height: 287px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .modal-game {
+    display: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 350px;
+    min-height: 30vh;
+    background-color: transparent;
+  }
+  .modal-game__img {
+    width: 100px;
+    height: 100px;
+  }
+  .modal-game__text {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+  }
+  .modal-game__result {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .modal-game__title {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .modal-game__btn {
+    margin: 0 auto;
+    display: block;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    background-color: royalblue;
+  }
 }
 
 /* VISUALLY-HIDDEN */
