@@ -7,13 +7,49 @@
   <title>Document</title>
   <!-- links -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/flexbox-grid.css">
   <link rel="stylesheet" href="css/main.min.css">
   <!-- /links -->
 </head>
 <body>
   <!-- header -->
   <header>
+    <div class="container">
+      <div class="game">
+        <div class="game__score">
+          <div class="game__desc">
+            <p class="game__title">rock</p>
+            <p class="game__title">paper</p>
+            <p class="game__title">scissors</p>
+          </div>
+          <div class="game__score-content">
+            <p class="game__score-text">score</p>
+            <p class="game__score-title">12</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <button class="content__btn"><img class="content__img" onclick="touchingFunc('paper')" src="img/paper.svg" alt="paper"></button>
+        <button class="content__btn"><img class="content__img" onclick="touchingFunc('scissors')" src="img/scissors.svg" alt="scissors"></button>
+        <button class="content__btn"><img class="content__img" onclick="touchingFunc('stone')" src="img/stone.svg" alt="stone"></button>
+        <img class="content__triple" src="img/triple.svg" alt="triple">
+      </div>
+
+      <div class="modal-game">
+        <div class="modal-game__you">
+          <p class="modal-game__text">you</p>
+          <img class="modal-game__img" alt="">
+        </div>
+        <div class="modal-game__result">
+          <h1 class="modal-game__title">you win</h1>
+          <button class="modal-game__btn" onclick="modalClose()">play</button>
+        </div>
+        <div class="modal-game__comp">
+          <p class="modal-game__text">computer</p>
+          <img id="comp" class="modal-dame__img-comp" alt="">
+        </div>
+      </div>
+    </div>
 
   </header>
   <!-- /header -->
